@@ -17,5 +17,14 @@ Sample data sent to user can be seen in data.txt file.
 
 Please let me know if there are further modifications adding to this file, we can create a branch and work together.
 
+Packages used
+--python3.9
+--mime
+--pandas
+--requests
+--os
+--tkinter
+--tkcalendar
+--smtp
 
 
