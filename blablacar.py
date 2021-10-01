@@ -21,7 +21,7 @@ class BlaBlaCar:
             currency = str(list(df_locale[df_locale["Country"] == get_country_input]["Default Currency"])[0])
         return locale, currency
 
-    def get_blablacar_json(self):
+    def get_blablacar_json(self) ->dict:
         start_date_local = str(self.get_calender())
         end_date_local = str(self.get_calender())
         locale, currency = self.locale_details()
@@ -95,7 +95,7 @@ class BlaBlaCar:
         date_time = main_trips_data["trips"][i]['waypoints'][j]['date_time']
         return address, place, date_time
 
-    def trips_extract(self, main_trips_data, no_of_trips_available):
+    def trips_extract(self, main_trips_data, no_of_trips_available) -> list :
         trip_main_list = []
         for i in range(0, no_of_trips_available):
             trip_main_dict_temp = {"trip_number": i + 1, "price": main_trips_data["trips"][i]['price']['amount'] + " " + \
