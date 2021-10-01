@@ -9,16 +9,16 @@ import os
 
 FROM_EMAIL = os.getenv("FROM_EMAIL")
 GMAIL_PASSWORD = os.getenv("GMAIL_PASSWORD")
+TO_EMAIL = os.getenv("TO_EMAIL")
 
 
 def send_email(no_of_trips_available):
     no_of_trips_available = no_of_trips_available
     from_location, to_location = FROM_LOCATION, TO_LOCATION
-    receiver_email = "***@gmail.com"
     subject = f"{no_of_trips_available} Trip Details are available"
     message = MIMEMultipart()
     message["From"] = FROM_EMAIL
-    message["To"] = receiver_email
+    message["To"] = TO_EMAIL
     message["Subject"] = subject
     body = f"Please find the attached trip details from {from_location}  to  {to_location}"
     message.attach(MIMEText(body, "plain"))
