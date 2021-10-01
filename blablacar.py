@@ -3,10 +3,9 @@ import requests
 from maprequest import MapRequest
 import pandas as pd
 import numpy as np
-import datetime as dt
 import tkinter as tk
 from tkinter import *
-from tkcalendar import Calendar, DateEntry
+from tkcalendar import Calendar
 
 BLABLACARAPI_KEY = os.getenv("BLABLACAR_API")
 BLABLA_ENDPOINT = "https://public-api.blablacar.com/api/v3/trips"
@@ -96,7 +95,7 @@ class BlaBlaCar:
         date_time = main_trips_data["trips"][i]['waypoints'][j]['date_time']
         return address, place, date_time
 
-    def trips_extract(self,main_trips_data,no_of_trips_available):
+    def trips_extract(self, main_trips_data, no_of_trips_available):
         trip_main_list = []
         for i in range(0, no_of_trips_available):
             trip_main_dict_temp = {"trip_number": i + 1, "price": main_trips_data["trips"][i]['price']['amount'] + " " + \

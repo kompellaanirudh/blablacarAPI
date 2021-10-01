@@ -14,14 +14,13 @@ GMAIL_PASSWORD = os.getenv("GMAIL_PASSWORD")
 def send_email(no_of_trips_available):
     no_of_trips_available = no_of_trips_available
     from_location, to_location = FROM_LOCATION, TO_LOCATION
-    receiver_email = "kanirudh300495@gmail.com"
+    receiver_email = "***@gmail.com"
     subject = f"{no_of_trips_available} Trip Details are available"
     message = MIMEMultipart()
     message["From"] = FROM_EMAIL
     message["To"] = receiver_email
     message["Subject"] = subject
     body = f"Please find the attached trip details from {from_location}  to  {to_location}"
-    #body = f"Please find the attached trip details from {getattr(location_details, 'from_location')}  to  {getattr(location_details, 'to_location')}"
     message.attach(MIMEText(body, "plain"))
     filename = "data.txt"
     attachment = open("F:/blablacarAPI/data.txt", "rb")
