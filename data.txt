@@ -1,0 +1,1 @@
+{'trip_number': 1, 'price': '2000.00 INR', 'from_address': '568, Banjara Hills Main Rd, Venkataraman Colony, Khairtabad, Hyderabad, Telangana', 'from_location': 'Hyderabad', 'from_date_time': '2021-10-02T06:00:00', 'to_address': 'I-43, L.G.F, Jangpura, Block I, Jungpura Extension, New Delhi, Delhi', 'to_location': 'New Delhi', 'to_date_time': '2021-10-03T11:30:00'}
