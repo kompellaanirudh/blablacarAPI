@@ -133,7 +133,7 @@ class BlaBlaCar:
 
         return count
 
-    def save_file(trip_main_list):
+    def save_file(self,trip_main_list):
         with open('data.txt', 'w') as f:
             for item in trip_main_list:
                 f.write("%s\n" % item)
